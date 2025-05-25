@@ -3,112 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Look Out Traffic</title>
+    <title>My Portfolio</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f6fb;
-            color: #222;
+            padding: 0;
+            background: #f4f4f4;
         }
         header {
-            background: #2d89ef;
+            background: #333;
             color: #fff;
-            padding: 2rem 0;
+            padding: 20px 0;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
         }
         nav {
-            margin-top: 1rem;
+            background: #444;
+            display: flex;
+            justify-content: center;
         }
         nav a {
             color: #fff;
+            padding: 14px 20px;
             text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            transition: color 0.2s;
+            transition: background 0.3s;
         }
         nav a:hover {
-            color: #ffcc00;
+            background: #555;
         }
-        .container {
+        main {
             max-width: 900px;
-            margin: 2rem auto;
+            margin: 40px auto;
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            padding: 2rem;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .card {
-            background: #e3eefd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(45,137,239,0.1);
+        section {
+            margin-bottom: 40px;
         }
-        .card h2 {
-            margin-top: 0;
-            color: #2d89ef;
+        h2 {
+            color: #333;
         }
         footer {
             text-align: center;
-            padding: 1rem 0;
-            background: #222;
+            padding: 20px 0;
+            background: #333;
             color: #fff;
-            margin-top: 2rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
+        /* Responsive */
         @media (max-width: 600px) {
-            .container {
-                padding: 1rem;
-            }
-            h1 {
-                font-size: 2rem;
+            main {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Look Out Traffic</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Live Updates</a>
-            <a href="#">Safety Tips</a>
-            <a href="#">Contact</a>
-        </nav>
+        <h1>Jane Doe</h1>
+        <p>Web Developer & Designer</p>
     </header>
-
-    <div class="container">
-        <div class="card">
-            <h2>Welcome to Look Out Traffic!</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
             <p>
-                Stay updated with the latest traffic information in your area. Our mission is to help you travel safely and efficiently.
+                Hello! I'm Jane, a passionate web developer with experience in building modern, responsive websites.
             </p>
-        </div>
-        <div class="card">
-            <h2>Live Traffic Updates</h2>
-            <p>
-                Get real-time updates on road conditions, accidents, and construction zones. Plan your route and avoid delays!
-            </p>
-        </div>
-        <div class="card">
-            <h2>Safety Tips</h2>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
             <ul>
-                <li>Always wear your seatbelt.</li>
-                <li>Obey speed limits and traffic signs.</li>
-                <li>Stay alert and avoid distractions.</li>
-                <li>Never drive under the influence.</li>
+                <li><strong>Portfolio Website:</strong> A showcase of my work and skills.</li>
+                <li><strong>Blog Platform:</strong> A simple blog built with HTML, CSS, and JavaScript.</li>
+                <li><strong>To-Do App:</strong> A productivity tool to manage daily tasks.</li>
             </ul>
-        </div>
-    </div>
-
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <label>Name:<br><input type="text" name="name" required></label><br><br>
+                <label>Email:<br><input type="email" name="email" required></label><br><br>
+                <label>Message:<br><textarea name="message" required></textarea></label><br><br>
+                <button type="submit">Send</button>
+            </form>
+            <p id="formMessage" style="color:green;"></p>
+        </section>
+    </main>
     <footer>
-        &copy; 2025 Look Out Traffic. All rights reserved.
+        &copy; 2025 Jane Doe
     </footer>
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('formMessage').textContent = "Thank you for your message!";
+            this.reset();
+        };
+    </script>
 </body>
 </html>
