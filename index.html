@@ -1,112 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background: #444;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: #fff;
-            padding: 14px 20px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        nav a:hover {
-            background: #555;
-        }
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #333;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        /* Responsive */
-        @media (max-width: 600px) {
-            main {
-                padding: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>CSS-Only Design</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
+      min-height: 100vh;
+    }
+    .v4_22 {
+      width: 100%;
+      height: 1117px;
+      background: linear-gradient(120deg, #120343 60%, #432889 100%);
+      opacity: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .v1_3 {
+      width: 100%;
+      height: 100%;
+      background: none;
+      opacity: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    .v2_2 {
+      width: 964px;
+      height: 900px;
+      background: rgba(18,3,67,0.96);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+    }
+    .v2_4 {
+      width: 964px;
+      height: 109px;
+      background: #fff;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .v2_3 {
+      width: 562px;
+      height: 70px;
+      background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(100,100,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    .v3_98 {
+      width: 256px;
+      height: 88px;
+      background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+      border-radius: 16px;
+      padding: 10px;
+      margin: 10px;
+      opacity: 1;
+      position: absolute;
+      top: 128px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      color: #fff;
+      font-weight: bold;
+      box-shadow: 0 4px 24px rgba(252,92,125,0.15);
+      letter-spacing: 2px;
+    }
+    .name {
+      color: #fff;
+      position: absolute;
+      left: 60px;
+    }
+    .main-title {
+      top: 250px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .main-desc {
+      top: 320px;
+      width: 600px;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    @media (max-width: 1100px) {
+      .v2_2, .v2_4 {
+        width: 98vw;
+        left: 1vw;
+      }
+      .main-desc {
+        width: 90vw;
+      }
+    }
+    @media (max-width: 700px) {
+      .v2_2, .v2_4 {
+        width: 100vw;
+        left: 0;
+        border-radius: 0;
+      }
+      .v3_98 {
+        left: 10px;
+        width: 90vw;
+      }
+      .main-title, .main-desc {
+        left: 10px;
+        width: 90vw;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Jane Doe</h1>
-        <p>Web Developer & Designer</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm Jane, a passionate web developer with experience in building modern, responsive websites.
-            </p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Portfolio Website:</strong> A showcase of my work and skills.</li>
-                <li><strong>Blog Platform:</strong> A simple blog built with HTML, CSS, and JavaScript.</li>
-                <li><strong>To-Do App:</strong> A productivity tool to manage daily tasks.</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="contactForm">
-                <label>Name:<br><input type="text" name="name" required></label><br><br>
-                <label>Email:<br><input type="email" name="email" required></label><br><br>
-                <label>Message:<br><textarea name="message" required></textarea></label><br><br>
-                <button type="submit">Send</button>
-            </form>
-            <p id="formMessage" style="color:green;"></p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 Jane Doe
-    </footer>
-    <script>
-        // Simple form submission handler
-        document.getElementById('contactForm').onsubmit = function(e) {
-            e.preventDefault();
-            document.getElementById('formMessage').textContent = "Thank you for your message!";
-            this.reset();
-        };
-    </script>
+  <div class="v4_22">
+    <div class="v1_3">
+      <div class="v2_2">
+        <div class="v2_4">
+          <div class="v2_3">
+            Your Brand
+          </div>
+        </div>
+        <div class="v3_98">
+          LOGO
+        </div>
+        <h1 class="name main-title">Welcome to Your CSS-Only Site</h1>
+        <p class="name main-desc">
+          This design uses only HTML and CSS—no images needed! Gradients and rounded corners provide a modern look. 
+          You can easily customize colors, sizes, and content to fit your needs. 
+          <br><br>
+          Try resizing the window to see the responsive layout.
+        </p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
